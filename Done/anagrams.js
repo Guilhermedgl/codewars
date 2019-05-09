@@ -1,9 +1,7 @@
-const anagrams = (word, anagram) => {
-  const sortedAnagram = anagram.split('').sort().join('').toLowerCase();
-  const sortedWord = word.split('').sort().join('').toLowerCase();
-  if (sortedAnagram === sortedWord) {
-    return true;
-  } return false;
+const isAnagram = (word, anagram) => {
+  const sortedAnagram = anagram.toLowerCase().split('').sort().join('');
+  const sortedWord = word.toLowerCase().split('').sort().join('');
+  return sortedAnagram === sortedWord;
 };
 
-console.log(anagrams('GUI', 'iug'));
+console.log(isAnagram('gui', 'iug'));

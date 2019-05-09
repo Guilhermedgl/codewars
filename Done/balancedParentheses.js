@@ -10,8 +10,9 @@ function balancedParentheses(str) {
       closeParentheses += 1;
     }
   });
-  if (openParentheses === closeParentheses) return true;
-  return false;
+  if (openParentheses === closeParentheses) {
+    return true;
+  }
 }
 
 console.log(balancedParentheses('(())()()'));

@@ -1,17 +1,13 @@
 // https://www.codewars.com/kata/dubstep/train/javascript
 
-function songDecoder(song) {
-  const newSong = song.split('WUB');
-  const noSpace = () => {
-    newSong.forEach((item, idx) => {
-      if (item === '') {
-        newSong.splice(idx, 1);
-        return noSpace();
-      }
-    });
-  };
-  if (!newSong.includes('')) {
-    return newSong.join(' ');
-  } noSpace();
-  return newSong.join(' ');
-}
+// const songDecoder = song => song.split('WUB').filter(word => word).join(' ');
+
+const songDecoder = (song) => {
+  console.log('song => ', song);
+  console.log('splited song => ', song.split('WUB'));
+  const filter = song.split('WUB').filter(e => e);
+  console.log('filter => ', filter);
+  console.log('filter + join => ', filter.join(' '));
+};
+
+songDecoder('WUBAWUBBWUBCWUB');
