@@ -9,14 +9,6 @@ const validParentheses = (parens) => {
   return parentheses['('] === parentheses[')'];
 };
 
-// function validParentheses(parens){
-//   let count = 0;
-//   for (let i = 0 ; i < parens.length && count >= 0; i++) {
-//     count += (parens[i] == '(') ? 1 : - 1;
-//   }
-//   return count === 0;
-// }
-
 console.log(validParentheses('()()((()'));
 console.log(validParentheses('())'));
 console.log(validParentheses(')())'));
