@@ -3,12 +3,12 @@
 // https://www.codewars.com/kata/simple-transposition/train/javascript
 
 const simpleTransposition = (text) => {
-  let even = '';
-  let odd = '';
+  let row1 = '';
+  let row2 = '';
   for (let i = 0; i < text.length; i += 1) {
-    i % 2 === 0 ? even += text[i] : odd += text[i];
+    i % 2 === 0 ? row2 += text[i] : row1 += text[i];
   }
-  return `${even}${odd}`;
+  return `${row2}${row1}`;
 };
 
 console.log(simpleTransposition('Simple text'));
